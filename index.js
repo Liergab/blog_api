@@ -23,6 +23,9 @@ app.use(express.urlencoded({extended:true}));
 app.use('/v1/api/auth/', authRoute );
 app.use('/v1/api/post/', postRoutes );
 app.use('/v1/api/user/', userRoutes );
+app.get('/sample', (req,res) => {
+    res.send('hello')
+  })
 app.use(pageNotFound);
 app.use(error);
 
