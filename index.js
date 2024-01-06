@@ -16,7 +16,10 @@ const port = 3001 || process.env.PORT;
 // middleware
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({
+        credentials: true,
+        origin: 'http://localhost:5173/', // Replace with your frontend's URL
+    }))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}));
 
