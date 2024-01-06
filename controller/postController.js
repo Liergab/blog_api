@@ -88,18 +88,6 @@ export const getPostById = async(req,res) => {
     res.status(200).json(post)
 }
 
-export const getallpostwithnoauth = async(req,res) => {
-   const posts = await prisma.posts.findMany({
-        include:{
-            userPost:true
-        },
-        orderBy: {
-            createdAt: 'desc' // Sorting by createdAt field in descending order
-        }
-    });
-
-    res.status(200).json(posts);
-}
 
 //@description -
 //@method -

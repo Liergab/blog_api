@@ -21,6 +21,6 @@ router.get('/:id',protect, controller.getPostById)
 router.post('/',protect,upload.single('image'), controller.createPost)
 router.delete('/:id',protect, controller.deletePost)
 router.put('/:id',protect,upload.single('image'), controller.updatePost)
-router.get('/getallpost', controller.getallpostwithnoauth);
+
 
 export default router
