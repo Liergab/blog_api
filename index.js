@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
         credentials: true,
-        origin: 'http://localhost:5173', // Replace with your frontend's URL
+        origin: 'https://bryanblog.netlify.app', // Replace with your frontend's URL
     }))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}));
